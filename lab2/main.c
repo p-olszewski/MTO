@@ -22,12 +22,22 @@ int my_printf(char *format_string, char *param){
 			// wielkość liter (małe na wielkie, wielkie na małe). 
 			// Proszę zaimplementować obsługę długości drukowanego stringa korzystając zapisu #.Xk 
 			//(tożsamego z %.Xs), gdzie X to dowolna liczba.
-		} else if((format_string[i] == '#') && (format_string[i+1] == '.') && (isdigit(format_string[i+2])) && (format_string[i+3] == 'k')){
+		} else if((format_string[i] == '#') && (format_string[i+1] == '.') && (isdigit(format_string[i+2]))){
 			i++;
-			int string_length = format_string[i+2];
+			// int string_length = format_string[i+2];
 
-			for(int k=0;k<string_length;k++){
-				char letter = param[k];
+			int number_length = 0;
+            for (int j = i + 2; j < strlen(format_string); j++)
+            {
+                if (format_string[j] == 'k') {
+                    number_length = j;
+                } else if (!isdigit(format_string[j])) {
+                    break;
+                }
+            } 
+
+			for(int l=0;l<string_length;l++){
+				char letter = param[l];
 				int ascii_value = (int) letter;
 				if (ascii_value >= 65 && ascii_value <= 90) {
 					ascii_value = ascii_value + 32;
