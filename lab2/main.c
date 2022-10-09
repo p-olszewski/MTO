@@ -18,8 +18,7 @@ int my_printf(char *format_string, char *param){
 				putchar(ascii_value); 
 			}
 		// execute if string is like '#.5 for example
-		} else if((format_string[i] == '#') && (format_string[i+1] == '.') && (isdigit(format_string[i+2]))){
-			i++;
+		} else if((format_string[i] == '#') && (format_string[i+1] == '.') && (isdigit(format_string[i+2]))){		
 
 			// count number length in string
 			int number_length = 0;
