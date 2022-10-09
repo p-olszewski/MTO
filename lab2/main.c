@@ -36,15 +36,20 @@ int my_printf(char *format_string, char *param){
                 }
             } 
 
-			for(int l=0;l<string_length;l++){
-				char letter = param[l];
-				int ascii_value = (int) letter;
-				if (ascii_value >= 65 && ascii_value <= 90) {
-					ascii_value = ascii_value + 32;
-				} else if (ascii_value >= 97 && ascii_value <= 122) {
-					ascii_value = ascii_value - 32;
+
+			if (number_length == 0) {
+                putchar(format_string[i]);
+            } else {
+				for(int l=0;l<string_length;l++){
+					char letter = param[l];
+					int ascii_value = (int) letter;
+					if (ascii_value >= 65 && ascii_value <= 90) {
+						ascii_value = ascii_value + 32;
+					} else if (ascii_value >= 97 && ascii_value <= 122) {
+						ascii_value = ascii_value - 32;
+					}
+					putchar(ascii_value); 
 				}
-				putchar(ascii_value); 
 			}
 			
 		}else
