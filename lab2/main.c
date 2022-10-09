@@ -21,6 +21,7 @@ int my_printf(char *format_string, char *param){
 		} else if((format_string[i] == '#') && (format_string[i+1] == '.') && (isdigit(format_string[i+2]))){
 			i++;
 
+			// count number length in string
 			int number_length = 0;
             for (int j = i + 2; j < strlen(format_string); j++) {
                 if (format_string[j] == 'k') {
