@@ -17,11 +17,6 @@ int my_printf(char *format_string, char *param){
 				}
 				putchar(ascii_value); 
 			}
-			// Na wzór przykładu proszę przygotować implementację "printf" wykorzystująca #k 
-			// jako zamiennik %s, który dodatkowo dla drukowanego stringa zmienia 
-			// wielkość liter (małe na wielkie, wielkie na małe). 
-			// Proszę zaimplementować obsługę długości drukowanego stringa korzystając zapisu #.Xk 
-			//(tożsamego z %.Xs), gdzie X to dowolna liczba.
 		} else if((format_string[i] == '#') && (format_string[i+1] == '.') && (isdigit(format_string[i+2]))){
 			i++;
 
