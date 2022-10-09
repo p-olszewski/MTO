@@ -17,6 +17,25 @@ int my_printf(char *format_string, char *param){
 				}
 				putchar(ascii_value); 
 			}
+			// Na wzór przykładu proszę przygotować implementację "printf" wykorzystująca #k 
+			// jako zamiennik %s, który dodatkowo dla drukowanego stringa zmienia 
+			// wielkość liter (małe na wielkie, wielkie na małe). 
+			// Proszę zaimplementować obsługę długości drukowanego stringa korzystając zapisu #.Xk 
+			//(tożsamego z %.Xs), gdzie X to dowolna liczba.
+		} else if((format_string[i] == '#') && (format_string[i+1] == '.') && (isdigit(format_string[i+2])) && (format_string[i+3] == 'k')){
+			i++;
+			int string_length = format_string[i+2];
+
+			for(int k=0;k<string_length;k++){
+				char letter = param[k];
+				int ascii_value = (int) letter;
+				if (ascii_value >= 65 && ascii_value <= 90) {
+					ascii_value = ascii_value + 32;
+				} else if (ascii_value >= 97 && ascii_value <= 122) {
+					ascii_value = ascii_value - 32;
+				}
+				putchar(ascii_value); 
+			}
 			
 		}else
 			putchar(format_string[i]);
