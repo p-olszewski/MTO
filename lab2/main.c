@@ -37,7 +37,6 @@ int my_printf(char *format_string, char *param){
 			if (number_length == 0) {
                 putchar(format_string[i]);
             } else {
-				// int string_length = format_string[i+2];
 				int number = 0;
 				char number_array[number_length + 1];
 
