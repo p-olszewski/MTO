@@ -53,6 +53,7 @@ int my_printf(char *format_string, char *param){
 					}
 					putchar(ascii_value); 
 				}
+				i = i + number_length;
 			}
 			
 		}else
