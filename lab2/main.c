@@ -24,11 +24,9 @@ int my_printf(char *format_string, char *param){
 			//(tożsamego z %.Xs), gdzie X to dowolna liczba.
 		} else if((format_string[i] == '#') && (format_string[i+1] == '.') && (isdigit(format_string[i+2]))){
 			i++;
-			// int string_length = format_string[i+2];
 
 			int number_length = 0;
-            for (int j = i + 2; j < strlen(format_string); j++)
-            {
+            for (int j = i + 2; j < strlen(format_string); j++) {
                 if (format_string[j] == 'k') {
                     number_length = j;
                 } else if (!isdigit(format_string[j])) {
@@ -36,10 +34,18 @@ int my_printf(char *format_string, char *param){
                 }
             } 
 
-
 			if (number_length == 0) {
                 putchar(format_string[i]);
             } else {
+				// int string_length = format_string[i+2];
+				int number = 0;
+				char number_array[number_length + 1];
+
+				// change string from numbers to integer number
+                memcpy(number_array, &format_string[i + 2], number_length);
+                number_array[number_length] = '\0';
+                number = atoi(number_array);
+
 				for(int l=0;l<string_length;l++){
 					char letter = param[l];
 					int ascii_value = (int) letter;
