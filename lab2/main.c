@@ -46,7 +46,8 @@ int my_printf(char *format_string, char *param){
                 number_array[number_length] = '\0';
                 number = atoi(number_array);
 
-				for(int l=0;l<string_length;l++){
+				// loop to number or to param length if its shorter
+				for(int l=0; l<number && l<strlen(param); l++){
 					char letter = param[l];
 					int ascii_value = (int) letter;
 					if (ascii_value >= 65 && ascii_value <= 90) {
