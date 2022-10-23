@@ -57,7 +57,15 @@ int my_printf(char *format_string, char *param){
 
 		// execute if string is like '#5 for example
 		} else if((format_string[i] == '#') && (isdigit(format_string[i+1]))){
-		
+			// count number length in string
+			int number_length = 0;
+            for (int j = i + 2; j < strlen(format_string); j++) {
+                if (format_string[j] == 'k') {
+                    number_length = j;
+                } else if (!isdigit(format_string[j])) {
+                    break;
+                }
+            } 
 		} else
 			putchar(format_string[i]);
 	}
