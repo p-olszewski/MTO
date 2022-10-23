@@ -59,7 +59,7 @@ int my_printf(char *format_string, char *param){
 		} else if((format_string[i] == '#') && (isdigit(format_string[i+1]))){
 			// count number length in string
 			int number_length = 0;
-            for (int j = i + 2; j < strlen(format_string); j++) {
+            for (int j = i + 1; j < strlen(format_string); j++) {
                 if (format_string[j] == 'k') {
                     number_length = j;
                 } else if (!isdigit(format_string[j])) {
@@ -74,7 +74,7 @@ int my_printf(char *format_string, char *param){
 				char number_array[number_length + 1];
 
 				// change string from numbers to integer number
-                memcpy(number_array, &format_string[i + 2], number_length);
+                memcpy(number_array, &format_string[i + 1], number_length);
                 number_array[number_length] = '\0';
                 number = atoi(number_array);
 			}
