@@ -56,7 +56,7 @@ int my_printf(char *format_string, char *param){
 			}
 
 		// execute if string is like '#5 for example
-		} else if((format_string[i] == '#') && (isdigit(format_string[i+i]))){
+		} else if((format_string[i] == '#') && (isdigit(format_string[i+1]))){
 		
 		} else
 			putchar(format_string[i]);
