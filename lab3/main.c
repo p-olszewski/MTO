@@ -70,7 +70,13 @@ int my_printf(char *format_string, char *param){
 			if (number_length == 0) {
                 putchar(format_string[i]);
             } else {
-				
+				int number = 0;
+				char number_array[number_length + 1];
+
+				// change string from numbers to integer number
+                memcpy(number_array, &format_string[i + 2], number_length);
+                number_array[number_length] = '\0';
+                number = atoi(number_array);
 			}
 
 
