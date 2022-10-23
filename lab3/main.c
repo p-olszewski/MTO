@@ -86,6 +86,7 @@ int my_printf(char *format_string, char *param){
 					}
 				}
 				
+				// loop to param length
 				for(int l=0; l<strlen(param); l++){					
 					char letter = param[l];
 					int ascii_value = (int) letter;
@@ -97,7 +98,6 @@ int my_printf(char *format_string, char *param){
 					putchar(ascii_value); 
 				}
 				i = i + number_length;
-
 			}
 		} else
 			putchar(format_string[i]);
