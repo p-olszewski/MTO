@@ -77,9 +77,28 @@ int my_printf(char *format_string, char *param){
                 memcpy(number_array, &format_string[i + 1], number_length);
                 number_array[number_length] = '\0';
                 number = atoi(number_array);
+
+				// Add spaces before if (number > string length)
+				if (number > strlen(param)) {
+					int spaces_before = number - strlen(param);
+					for (int s = 0; s < spaces_before; s++) {
+						putchar(' ');
+					}
+				}
+				
+				for(int l=0; l<strlen(param); l++){					
+					char letter = param[l];
+					int ascii_value = (int) letter;
+					if (ascii_value >= 65 && ascii_value <= 90) {
+						ascii_value = ascii_value + 32;
+					} else if (ascii_value >= 97 && ascii_value <= 122) {
+						ascii_value = ascii_value - 32;
+					}
+					putchar(ascii_value); 
+				}
+				i = i + number_length;
+
 			}
-
-
 		} else
 			putchar(format_string[i]);
 	}
