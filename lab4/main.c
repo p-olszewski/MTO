@@ -8,6 +8,11 @@ int my_printf(char *format_string, char *param){
 			if (isdigit(atoi(param))) {
 				printf("%d",param);
 			}
+
+			int isNumber = 1;
+            for (int j = 0; j < strlen(param); j++) {
+            } 
+			
 		}else
 			putchar(format_string[i]);
 	}
