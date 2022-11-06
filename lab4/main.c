@@ -15,7 +15,8 @@ int my_printf(char *format_string, char *param){
             }
 
 			if (paramIsNumber) {
-				printf("%d",param);
+				// printf("%d",param);
+				printf("%d",strrev(param));
 			} else {
 				puts("");
 				return 0;
