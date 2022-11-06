@@ -17,7 +17,6 @@ int my_printf(char *format_string, char *param){
 			if (paramIsNumber) {
 				printf("%d",param);
 			} else {
-				// fprintf(stderr, "%s", "Param is not a number. Operation not allowed!\n");
 				return 0;
 			}
 			
