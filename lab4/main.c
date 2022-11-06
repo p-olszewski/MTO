@@ -17,6 +17,7 @@ int my_printf(char *format_string, char *param){
 			if (paramIsNumber) {
 				printf("%d",param);
 			} else {
+				puts("");
 				return 0;
 			}
 			
