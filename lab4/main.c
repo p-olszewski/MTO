@@ -5,7 +5,9 @@ int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
 		if((format_string[i] == '#') && (format_string[i+1] == 'g')){
 			i++;
-			printf("%d",param);
+			if (isdigit(atoi(param))) {
+				printf("%d",param);
+			}
 		}else
 			putchar(format_string[i]);
 	}
