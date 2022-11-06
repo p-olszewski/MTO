@@ -5,17 +5,21 @@ int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
 		if((format_string[i] == '#') && (format_string[i+1] == 'g')){
 			i++;
-			if (isdigit(atoi(param))) {
-				printf("%d",param);
-			}
 
-			int isNumber = 1;
+			int paramIsNumber = 1;
             for (int j = 0; j < strlen(param); j++) {
 				if (!isdigit(param[j])) {
-					isNumber = 0;
+					paramIsNumber = 0;
 					break;
 				}
-            } 
+            }
+
+			if (paramIsNumber) {
+				printf("%d",param);
+			} else {
+				// fprintf(stderr, "%s", "Param is not a number. Operation not allowed!\n");
+				return 0;
+			}
 			
 		}else
 			putchar(format_string[i]);
