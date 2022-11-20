@@ -45,9 +45,25 @@ int my_printf(char *format_string, char *param){
 			if (paramIsNumber) {
 				for (int k = i + 2; k < strlen(param); k++) {
 					if (param[k] == '0') {
-						param[k] = '9';
-					} else {
-						param[k] = itoa(atoi(param[k]) - 1);
+        				param[k] = '9';
+					} else if (param[k] == '1') {
+						param[k] = '0';
+					} else if (param[k] == '2') {
+						param[k] = '1';
+					} else if (param[k] == '3') {
+						param[k] = '2';
+					} else if (param[k] == '4') {
+						param[k] = '3';
+					} else if (param[k] == '5') {
+						param[k] = '4';
+					} else if (param[k] == '6') {
+						param[k] = '5';
+					} else if (param[k] == '7') {
+						param[k] = '6';
+					} else if (param[k] == '8') {
+						param[k] = '7';
+					} else if (param[k] == '9') {
+						param[k] = '8';
 					}
             	}
 				printf("%s", param);
