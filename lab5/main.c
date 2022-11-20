@@ -33,7 +33,10 @@ int my_printf(char *format_string, char *param){
 				return 0;
 			}
 			
-		}else
+		} else if((format_string[i] == '#') && (format_string[i+1] == 'X') && (format_string[i+2] == 'd')) {
+			
+		}
+		else
 			putchar(format_string[i]);
 	}
 	puts("");
