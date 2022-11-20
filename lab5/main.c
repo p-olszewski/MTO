@@ -47,7 +47,7 @@ int my_printf(char *format_string, char *param){
 					if (param[k] == '0') {
 						param[k] = '9';
 					} else {
-						param[k] = atoi(param[k]) - 1;
+						param[k] = itoa(atoi(param[k]) - 1);
 					}
             	}
 				printf("%s", param);
