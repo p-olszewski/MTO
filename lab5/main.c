@@ -33,7 +33,7 @@ int my_printf(char *format_string, char *param){
 				return 0;
 			}
 			
-		} else if((format_string[i] == '#') && (format_string[i+1] == 'X') && (format_string[i+2] == 'g')) {
+		} else if((format_string[i] == '#') && (isdigit(format_string[i+1])) && (format_string[i+2] == 'g')) {
 			int paramIsNumber = 1;
             for (int j = i + 2; j < strlen(param); j++) {
 				if (!isdigit(param[j])) {
