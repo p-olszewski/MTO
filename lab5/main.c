@@ -2,14 +2,37 @@
 #include <string.h>
 #include <ctype.h>
 
+void reverse_str(char *str1)  {
+    int i, len, temp;
+    len = strlen(str1);
+    for (i = 0; i < len/2; i++) {
+        temp = str1[i];
+        str1[i] = str1[len - i - 1];
+        str1[len - i - 1] = temp;
+    }
+}
+
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
 		if((format_string[i] == '#') && (format_string[i+1] == 'g')){
 			i++;
-			printf("%d",param);
-			if (isdigit(atoi(param))) {
-				printf("%d",param);
+
+			int paramIsNumber = 1;
+            for (int j = 0; j < strlen(param); j++) {
+				if (!isdigit(param[j])) {
+					paramIsNumber = 0;
+					break;
+				}
+            }
+
+			if (paramIsNumber) {
+				reverse_str(param);
+				printf("%d",atoi(param));
+			} else {
+				puts("");
+				return 0;
 			}
+			
 		}else
 			putchar(format_string[i]);
 	}
