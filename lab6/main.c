@@ -14,7 +14,11 @@ int my_printf(char *format_string, char *param){
                     break;
                 }
             } 
-			
+
+			if (number_length == 0) {
+                putchar(format_string[i]);
+            }
+
 		}else
 			putchar(format_string[i]);
 	}
