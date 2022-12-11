@@ -27,14 +27,8 @@ int my_printf(char *format_string, char *param){
 					}
             	}
 
-				if (paramIsNumber) {
-					
-				} else {
-					puts("");
-					return 0;
-				}
-
-
+				if (!paramIsNumber) break;
+			
 				int number = 0;
 				char number_array[number_length + 1];
 
@@ -44,13 +38,19 @@ int my_printf(char *format_string, char *param){
                 number = atoi(number_array);
 
 				// loop to number
-				for(int l=0; l<number; l++){
-
+				for(int l=0; l<number; l++){	
+					if (param[l] == '0') {
+						param[l] = '9';
+					} else  {
+						int old_digit = param[l];
+						int new_digit = (old_digit*9+1)%10;
+						param[l] = new_digit;
+					}
+					printf("%s", param);
+				}
 				}
 				i = i + number_length;
-			}
-
-		}else
+			} else
 			putchar(format_string[i]);
 	}
 	puts("");
