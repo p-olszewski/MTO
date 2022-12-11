@@ -27,6 +27,10 @@ int my_printf(char *format_string, char *param){
                 number_array[number_length] = '\0';
                 number = atoi(number_array);
 
+				// loop to number
+				for(int l=0; l<number; l++){
+					
+				}
 				i = i + number_length;
 			}
 
