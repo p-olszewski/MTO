@@ -28,7 +28,10 @@ int my_printf(char *format_string, char *param){
             	}
 
 				if (paramIsNumber) {
-				
+					
+				} else {
+					puts("");
+					return 0;
 				}
 
 
