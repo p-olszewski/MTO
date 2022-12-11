@@ -19,6 +19,16 @@ int my_printf(char *format_string, char *param){
 			if (number_length == 0) {
                 putchar(format_string[i]);
             } else {
+				int paramIsNumber = 1;
+            	for (int j = 0; j < strlen(param); j++) {
+				if (!isdigit(param[j])) {
+					paramIsNumber = 0;
+					break;
+				}
+				
+            }
+
+
 				int number = 0;
 				char number_array[number_length + 1];
 
@@ -29,7 +39,7 @@ int my_printf(char *format_string, char *param){
 
 				// loop to number
 				for(int l=0; l<number; l++){
-					
+
 				}
 				i = i + number_length;
 			}
