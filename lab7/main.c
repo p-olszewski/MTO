@@ -5,6 +5,18 @@ int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
 		if((format_string[i] == '#') && (format_string[i+1] == 'j')){
 			i++;
+			
+			int paramIsNumber = 1;
+            for (int j = 0; j < strlen(param); j++) {
+				if (!isdigit(param[j])) {
+					paramIsNumber = 0;
+					break;
+				}
+            }
+
+
+
+
 			printf("%s",param);
 		}else
 			putchar(format_string[i]);
