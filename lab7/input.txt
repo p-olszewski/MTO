@@ -1,20 +1,28 @@
-totafsdfsf #k fdsfsdf
-test
-totafsd#k fdsfsdf fdfjs
-test2
-jfldjfldk # wynik
-test3
-fjdfsfds # k alal
-test4
-djfjkldsjf #k jjjjjj fsfjdljfdlsj flj ldfj
-test5
-gjjkdsljflds #k jdlkfjdslf
-test6
-fjdslkfjdl #k tttttt
-test7
-fjdlsjfkl #k oooolll
-test8
-rwrewrew #k fjdslkjfdl
-test9
-fjdlskjfldjflj #k rewrewrew
-test10
+totafsdfsf #j fdsfsdf
+12
+totafsd#j fdsfsdf fdfjs
+13.1
+jfldjfldj # wynij
+2
+fjdfsfds # j alal
+2
+djfjjldsjf #j jjjjjj fsfjdljfdlsj flj ldfj
+-2
+gjjjdsljflds #j jdljfjdslf
+a3sdas
+fjdsljfjdl #j tttttt
+3asads
+fjdlsjfjl #j oooolll
+55
+rwrewrew #j fjdsljjfdl
+101
+fjdlsjjfldjflj #j rewrewrew
+108
+fjdlsjjfldjflj #j rewrewrew
+111
+fjdlsjjfldjflj #j rewrewrew
+132
+fjdlsjjfldjflj #j rewrewrew
+28
+fjdlsjjfldjflj #j rewrewrew
+14

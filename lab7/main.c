@@ -1,14 +1,9 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 
-void change_to_hex(char *str1)  {
-	int i, len, temp;
-    len = strlen(str1);
-    for (i = 0; i < len; i++) {
-        
-    }
-}
 
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
@@ -24,16 +19,35 @@ int my_printf(char *format_string, char *param){
             }
 
 			if (paramIsNumber) {
-				change_to_hex(param);
+				int i, len, temp;
+				len = strlen(param);
+				long decimalnum, quotient, remainder;
+				int k, j = 0;
+				char hexadecimalnum[100]; 
+				char output[100];
+				int decimal_number = atoi(param);
+				sprintf(hexadecimalnum, "%x", decimal_number);
+				for (int l=0; l<strlen(hexadecimalnum); l++) {
+					if (hexadecimalnum[l] == 'a'){
+						hexadecimalnum[l] = 'g';
+					} else if (hexadecimalnum[l] == 'b'){
+						hexadecimalnum[l] = 'h';
+					} else if (hexadecimalnum[l] == 'c'){
+						hexadecimalnum[l] = 'i';
+					} else if (hexadecimalnum[l] == 'd'){
+						hexadecimalnum[l] = 'j';
+					} else if (hexadecimalnum[l] == 'e'){
+						hexadecimalnum[l] = 'k';
+					} else if (hexadecimalnum[l] == 'f'){
+						hexadecimalnum[l] = 'l';
+					}
+				}
+				printf(hexadecimalnum);
 			} else {
 				puts("");
 				return 0;
 			}
-			
-
-
-
-			printf("%s",param);
+		
 		}else
 			putchar(format_string[i]);
 	}
