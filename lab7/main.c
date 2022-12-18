@@ -5,7 +5,9 @@
 void change_to_hex(char *str1)  {
 	int i, len, temp;
     len = strlen(str1);
-    
+    for (i = 0; i < len; i++) {
+        
+    }
 }
 
 int my_printf(char *format_string, char *param){
