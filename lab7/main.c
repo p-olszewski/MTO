@@ -20,7 +20,7 @@ int my_printf(char *format_string, char *param){
             }
 
 			if (paramIsNumber) {
-				
+				change_to_hex(param);
 			} else {
 				puts("");
 				return 0;
